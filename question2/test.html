@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <div class="container">
+        <div class="correctionDiv">
+            <div class="screen">
+                <div class="screenText">
+                    <p>{riely : riley}</p>
+                    <p>{riely : riley}</p>
+                    <p>{riely : riley}</p>
+                    <p>{riely : riley}</p>
+                    <p>{riely : riley}</p>
+                </div>
+
+            </div>
+
+            <div  class="correctionInput">
+                <label for="wrongText">Enter Error:</label>
+                <input type="text" name="wrongText" id="wrongText" class="wrongText">
+                <label for="wrongText">Enter Correction:</label>
+                <input type="text" name="rightText" id="rightText" class="rightText">
+            </div>
+
+            <div class="buttons">
+                <button class="remove">REMOVE</button>
+                <button class="add">ADD</button>
+            </div>
+        </div>
+
+
+        <div class="textareaDiv">
+            <textarea name="textArea" id="textArea" cols="50" rows="17"></textarea>
+        </div>
+    </div>
+
+
+    <script>
+        //Javascript Logic
+
+        const corrections = {
+            "ducty" : "dusty",
+            "faully" : "faulty",
+            "ducking" : "fucking",
+            "jello" : "hello",
+            "2day" : "today"
+        }
+
+        for(const key in corrections){
+            // console.log(`${key} : ${corrections[key]}`)
+            const text = "How are you 2day dawg?"
+            textWord = text.split(" ")
+            
+            for(const i in textWord){
+                textValue = textWord[i]
+                if(key == textValue){
+                    console.log(corrections[key])
+                }
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
